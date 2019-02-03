@@ -2,11 +2,35 @@ import {Fragment, useState} from "react"
 import axios from "axios"
 import generate from "shortid"
 import React from "react"
+import {
+  Col,
+  Container,
+  Jumbotron,
+  ListGroup,
+  ListGroupItem,
+  Row
+} from 'reactstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SearchBar from "./components/searchbar"
+import SearchButton from "./components/SearchButton"
+import Paper from '@material-ui/core/Paper';
+import IpaSymbol from "./components/IpaSymbol"
 
 const App = (props) => {
   // State
   const [userInput, setUserInput] = useState("")
-  const [json, setJson] = useState({})
+  const [json, setJson] = useState({
+    a: [
+      {
+        word: "man",
+        indices: [1, 2]
+      },
+      {
+        word: "woman",
+        indices: [1, 2]
+      }
+    ]
+  })
 
   // Functions
   const handleFind = () => {
@@ -30,29 +54,53 @@ const App = (props) => {
 
   const mapObject = (obj) => {
     return Object.keys(obj)
-      .map(key => [key, generate()])
-      .map(([key, id]) =>
-          <li key={id}>{key}: {obj[key]}</li>
-          )
+      .map(key => [generate(), key, obj[key].map(value => value.word + " ")])
+      .map(([id, key, value]) =>
+        <ListGroupItem key={id}><IpaSymbol symbol={key} words={value}/></ListGroupItem>
+      )
   }
 
   return (
     <Fragment>
-    <input
-      placeholder="Search.."
-      value={String(userInput)}
-      onChange={handleSearchBar}
-    />
-    <button
-        variant="contained"
-        color="primary"
-        onClick={handleFind}>
-    Search
-    </button>
-  <ul>
-    {mapObject(json)}
-  </ul>
-      </Fragment>
+      <Jumbotron style={{"textAlign": "center"}}>
+        <h1>How do I say? æʌe </h1>
+      </Jumbotron>
+
+      <Container>
+
+        <Row noGutters>
+          <Col xs="1"/>
+
+          <Col xs="9" >
+            <SearchBar userInput={userInput}
+                       handleSearchBar={handleSearchBar}/>
+          </Col>
+
+          <Col xs="1" >
+            <SearchButton handleFind={handleFind}/>
+          </Col>
+
+          <Col xs="1"/>
+        </Row>
+
+        <Row style={{"height" : "10vh"}}/>
+
+        <Row>
+          <Col xs="1"/>
+          <Col xs="9">
+            <Paper>
+              <ListGroup>
+                {mapObject(json)}
+              </ListGroup>
+            </Paper>
+          </Col>
+          <Col xs="1"/>
+
+        </Row>
+
+      </Container>
+
+    </Fragment>
   )
 }
 
