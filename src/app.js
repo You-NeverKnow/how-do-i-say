@@ -16,7 +16,7 @@ import SearchButton from "./components/SearchButton"
 import Paper from '@material-ui/core/Paper';
 import IpaSymbol from "./components/IpaSymbol"
 
-const App = (props) => {
+const App = () => {
   // State
   const [userInput, setUserInput] = useState("")
   const [json, setJson] = useState({
@@ -54,9 +54,11 @@ const App = (props) => {
 
   const mapObject = (obj) => {
     return Object.keys(obj)
-      .map(key => [generate(), key, obj[key].map(value => value.word + " ")])
+      .map(key => [generate(), key, obj[key]])
       .map(([id, key, value]) =>
-        <ListGroupItem key={id}><IpaSymbol symbol={key} words={value}/></ListGroupItem>
+        <ListGroupItem key={id}>
+          <IpaSymbol symbol={key} words={value}/>
+        </ListGroupItem>
       )
   }
 
