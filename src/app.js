@@ -1,6 +1,5 @@
 import {Fragment, useState} from "react"
 import axios from "axios"
-import generate from "shortid"
 import React from "react"
 import {
   Col,
@@ -19,19 +18,22 @@ import IpaSymbol from "./components/IpaSymbol"
 const App = () => {
   // State
   const [userInput, setUserInput] = useState("")
-  const [json, setJson] = useState({
-    a: [
+  const [json, setJson] = useState([{
+    _id: "12736127361239",
+    ch: "a",
+    words: [
       {
         word: "man",
-        indices: [1, 2]
+        indices: [1]
       },
       {
         word: "woman",
-        indices: [1, 2]
+        indices: [3]
       }
     ]
-  })
+  }])
 
+  
   // Functions
   const handleFind = () => {
     const url = "//localhost:8000/search/"
@@ -52,20 +54,19 @@ const App = () => {
     setUserInput(e.target.value)
   }
 
-  const mapObject = (obj) => {
-    return Object.keys(obj)
-      .map(key => [generate(), key, obj[key]])
-      .map(([id, key, value]) =>
+  const mapObject = (objList) => {
+    return objList.map(obj => [obj["_id"], obj["ch"], obj["words"]])
+      .map(([id, ch, words]) =>
         <ListGroupItem key={id}>
-          <IpaSymbol symbol={key} words={value}/>
+          <IpaSymbol symbol={ch} words={words}/>
         </ListGroupItem>
       )
   }
-
+  
   return (
     <Fragment>
       <Jumbotron style={{"textAlign": "center"}}>
-        <h1>How do I say? æʌe </h1>
+        <h1>How do I say? æʌeʊɒə </h1>
       </Jumbotron>
 
       <Container>
@@ -99,7 +100,7 @@ const App = () => {
           <Col xs="1"/>
 
         </Row>
-
+        <Row style={{"height" : "10vh"}}/>
       </Container>
 
     </Fragment>
