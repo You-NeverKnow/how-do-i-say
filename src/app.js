@@ -32,7 +32,6 @@ const App = () => {
       }
     ]
   }])
-
   
   // Functions
   const handleFind = () => {
