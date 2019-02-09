@@ -40,7 +40,7 @@ const App = () => {
     const options =  {
         params: {
           q: userInput
-        }
+        },
       }
     axios.get(url,options)
       .then(res => {
