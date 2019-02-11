@@ -1,8 +1,6 @@
 ## What is this project?
 An International Phonetic Symbol dictionary. Type an IPA symbol in the search box, or a list of symbols, and it will return a set of words they appear in. Currently, it does not have an IPA keyboard, but I plan to add it as soon as I get time from school. As of now, you might use http://ipa.typeit.org/full/. 
-
 ![](https://media.giphy.com/media/1P01VCSs34QCBS7nhb/giphy.gif)
-
 ## Rationale
 My name written in English has non-standard character combinations. Moreover, these combinations are pronounced differently in the Indian English dialect. In International Phonetic Alphabet (IPA), its written as either "əðvəɪʔ" or "əðvaʔ".
 
