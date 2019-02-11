@@ -7,7 +7,8 @@ My name written in English has non-standard character combinations. Moreover, th
 
 So every time I had to introduce myself to someone, this conversation would take place: 
 > 'Hi. I'm Advait.'  
-> 'Wait. How did you say that!?'  
+> 'Wait. How did you say that!?'    
+
 I would repeat myself, only to be met with even more confused looks.
 
 First time this happened, I picked up words from English language that had pronunciations corresponding to phonemes in my name. So I would say A-d-v-a-i-t as in 
@@ -38,4 +39,4 @@ Doing forget to install dependencies with `yarn install` before doing any of abo
 - [ ] Option to show more word examples for a character
 - [ ] Animations, and better UI
 - [ ] Multiple accent support. Right now the app returns symbols according to only American English accent.
-- [ ] Support for dipthongs and long vowels.
+- [ ] Support for dipthongs and long vowels
