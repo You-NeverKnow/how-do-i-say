@@ -10,10 +10,10 @@ So every time I had to introduce myself to someone, this conversation would take
 I would repeat myself, only to be met with even more confused looks.
 
 First time this happened, I picked up words from English language that had pronunciations corresponding to phonemes in my name. So I would say A-d-v-a-i-t as in 
-'a': first 'a' in again, alive
-'d': 'the' or 'th' in those.
-'va': 'va' in vain
-'t': 't' in butter, or the Spanish 't' of burrito.
+> 'a': first 'a' in again, alive  
+> 'd': 'the' or 'th' in those.  
+> 'va': 'va' in vain  
+> 't': 't' in butter, or the Spanish 't' of burrito.  
 
 While fun at first, it got pretty boring for me to introduce my name with same letter-word combinations every time. I wanted to switch things up, and come up with new words to express the pronunciation of my name. However, coming up with new words based on pronunciation was harder than I imagined. What I needed was a dictionary of IPA symbols. There wasn't one available online, so I created one myself. 
 
