@@ -10,6 +10,7 @@
     "react": "^16.8.0-alpha.1",
     "react-dom": "^16.8.0-alpha.1",
     "react-scripts": "2.1.3",
+    "react-simple-keyboard": "^1.16.1",
     "reactstrap": "^7.1.0",
     "shortid": "^2.2.14"
   },

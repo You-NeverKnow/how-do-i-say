@@ -14,24 +14,29 @@ import SearchBar from "./components/searchbar"
 import SearchButton from "./components/SearchButton"
 import Paper from '@material-ui/core/Paper';
 import IpaSymbol from "./components/IpaSymbol"
+import Keyboard from 'react-simple-keyboard';
+import 'react-simple-keyboard/build/css/index.css';
+import './css/animate.css'
 
 const App = () => {
+
   // State
   const [userInput, setUserInput] = useState("")
-  const [json, setJson] = useState([{
-    _id: "12736127361239",
-    ch: "a",
-    words: [
-      {
-        word: "man",
-        indices: [1]
-      },
-      {
-        word: "woman",
-        indices: [3]
-      }
-    ]
-  }])
+  // const [json, setJson] = useState([{
+  //   _id: "12736127361239",
+  //   ch: "a",
+  //   words: [
+  //     {
+  //       word: "man",
+  //       indices: [1]
+  //     },
+  //     {
+  //       word: "woman",
+  //       indices: [3]
+  //     }
+  //   ]
+  // }])
+  const [json, setJson] = useState([])
   
   // Functions
   const handleFind = () => {
@@ -64,8 +69,8 @@ const App = () => {
   
   return (
     <Fragment>
-      <Jumbotron style={{"textAlign": "center"}}>
-        <h1>How do I say? æʌeʊɒə </h1>
+      <Jumbotron style={{"textAlign": "center", "backgroundColor": "#e2a1c2"}}>
+        <h1>How do I say?</h1>
       </Jumbotron>
 
       <Container>
@@ -96,12 +101,12 @@ const App = () => {
               </ListGroup>
             </Paper>
           </Col>
-          <Col xs="1"/>
+          <Col xs="2" />
 
         </Row>
         <Row style={{"height" : "10vh"}}/>
       </Container>
-
+      
     </Fragment>
   )
 }

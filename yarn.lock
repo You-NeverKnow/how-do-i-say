@@ -8345,6 +8345,11 @@ react-scripts@2.1.3:
   optionalDependencies:
     fsevents "1.2.4"
 
+react-simple-keyboard@^1.16.1:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/react-simple-keyboard/-/react-simple-keyboard-1.16.1.tgz#14c057d0792f39054aa39803db5421c291e54ffe"
+  integrity sha512-5QUU8+zkQcXR+PgdZHbqnmrt48Q1uGg0Cux5Jrk76UhPxFV6FfrpP0dBfbHOCwxRihvOCyE/vdOSSza96U45tw==
+
 react-transition-group@^2.2.1, react-transition-group@^2.3.1:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.5.3.tgz#26de363cab19e5c88ae5dbae105c706cf953bb92"
