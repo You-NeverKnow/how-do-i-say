@@ -14,34 +14,22 @@ import SearchBar from "./components/searchbar"
 import SearchButton from "./components/SearchButton"
 import Paper from '@material-ui/core/Paper';
 import IpaSymbol from "./components/IpaSymbol"
-import Keyboard from 'react-simple-keyboard';
 import 'react-simple-keyboard/build/css/index.css';
 import './css/animate.css'
+import Examples from "./components/examples"
+import ShowExamplesOrType from "./components/showExamplesOrType"
 
 const App = () => {
 
   // State
   const [userInput, setUserInput] = useState("")
-  // const [json, setJson] = useState([{
-  //   _id: "12736127361239",
-  //   ch: "a",
-  //   words: [
-  //     {
-  //       word: "man",
-  //       indices: [1]
-  //     },
-  //     {
-  //       word: "woman",
-  //       indices: [3]
-  //     }
-  //   ]
-  // }])
   const [json, setJson] = useState([])
-  
+  const [show, setShow] = useState(false)
+
   // Functions
   const handleFind = () => {
     const url = "//localhost:8000/search/"
-
+    setShow(true)
     const options =  {
         params: {
           q: userInput
@@ -74,39 +62,22 @@ const App = () => {
       </Jumbotron>
 
       <Container>
-
         <Row noGutters>
           <Col xs="1"/>
-
           <Col xs="9" >
             <SearchBar userInput={userInput}
-                       handleSearchBar={handleSearchBar}/>
+                       handleSearchBar={handleSearchBar} setShow={setShow}/>
           </Col>
-
           <Col xs="1" >
             <SearchButton handleFind={handleFind}/>
           </Col>
-
           <Col xs="1"/>
         </Row>
-
         <Row style={{"height" : "10vh"}}/>
-
-        <Row>
-          <Col xs="1"/>
-          <Col xs="9">
-            <Paper>
-              <ListGroup>
-                {mapObject(json)}
-              </ListGroup>
-            </Paper>
-          </Col>
-          <Col xs="2" />
-
-        </Row>
+            <ShowExamplesOrType show={show} chars={json}/>
         <Row style={{"height" : "10vh"}}/>
       </Container>
-      
+
     </Fragment>
   )
 }
