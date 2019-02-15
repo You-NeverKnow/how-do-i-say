@@ -1,13 +1,14 @@
 ## What is this project?
-An International Phonetic Symbol dictionary. Type an IPA symbol in the search box, or a list of symbols, and it will return a set of words they appear in. Currently, it does not have an IPA keyboard, but I plan to add it as soon as I get time from school. As of now, you might use http://ipa.typeit.org/full/. 
+An International Phonetic Alphabet (IPA) dictionary. Type an IPA symbol in the search box, or a list of symbols, and it will return a set of words they appear in. Currently, it does not have an IPA keyboard, but I plan to add it as soon as I get time from school. As of now, you might use http://ipa.typeit.org/full/ to copy-paste IPA characters in the search box. 
 
 ![](https://media.giphy.com/media/1P01VCSs34QCBS7nhb/giphy.gif)
 ## Rationale
 My name written in English has non-standard character combinations. Moreover, these combinations are pronounced differently in the Indian English dialect. In International Phonetic Alphabet (IPA), its written as either "əðvəɪʔ" or "əðvaʔ".
 
 So every time I had to introduce myself to someone, this conversation would take place: 
-'Hi. I'm Advait.'
-'Wait. How did you say that!?'
+> 'Hi. I'm Advait.'  
+> 'Wait. How did you say that!?'    
+
 I would repeat myself, only to be met with even more confused looks.
 
 First time this happened, I picked up words from English language that had pronunciations corresponding to phonemes in my name. So I would say A-d-v-a-i-t as in 
@@ -38,4 +39,4 @@ Doing forget to install dependencies with `yarn install` before doing any of abo
 - [ ] Option to show more word examples for a character
 - [ ] Animations, and better UI
 - [ ] Multiple accent support. Right now the app returns symbols according to only American English accent.
-- [ ] Support for dipthongs and long vowels.
+- [ ] Support for dipthongs and long vowels
