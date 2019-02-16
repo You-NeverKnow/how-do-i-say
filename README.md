@@ -33,7 +33,7 @@ From this project,
 Doing forget to install dependencies with `yarn install` before doing any of above steps!
 
 ## Future work
-- [ ] Pop-up IPA keyboard that works with React
+- [x] Pop-up IPA keyboard that works with React
 - [ ] Tooptips for pronouncing each symbol
 - [ ] Automation in creating index positions of an IPA symbol from word-IPA pairs
 - [ ] Option to show more word examples for a character
