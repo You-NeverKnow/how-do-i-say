@@ -1,7 +1,7 @@
 ## What is this project?
 An International Phonetic Alphabet (IPA) dictionary. Type an IPA symbol in the search box, or a list of symbols, and it will return a set of words they appear in.
 
-![](https://imgur.com/a/IyftoxC)
+![](https://media.giphy.com/media/Yrqd5olFtYKXZ64dtF/source.gif)
 ## Rationale
 My name written in English has non-standard character combinations. Moreover, these combinations are pronounced differently in the Indian English dialect. In International Phonetic Alphabet (IPA), its written as either "əðvəɪʔ" or "əðvaʔ".
 
